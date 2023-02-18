@@ -15,6 +15,7 @@ public class WasRun extends TestCase {
     public void testBrokenMethod() {
         throw new AssertionError();
     }
+
     public void testMethod() {
         log += " testMethod";
     }

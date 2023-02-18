@@ -3,7 +3,7 @@ package xunit;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 
-public class TestCase {
+public class TestCase implements Test{
     protected final String name;
 
     public TestCase(String name) {
@@ -11,8 +11,7 @@ public class TestCase {
     }
 
 
-    public TestResult run() {
-        TestResult result = new TestResult();
+    public void run(TestResult result) {
         result.testStarted();
 
         setUp();
@@ -25,7 +24,6 @@ public class TestCase {
         }
 
         tearDown();
-        return result;
     }
 
     public void setUp() {
