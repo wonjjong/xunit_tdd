@@ -9,6 +9,7 @@ public class TestSuite implements Test {
 
     public TestSuite(Class<? extends TestCase> testClass) {
         Arrays.stream(testClass.getMethods())
+                /* .filter(m -. AnnotationUtils.findAnnotation(m, xunit.annotation.Test.class) != null) 애노테이션 사용, spring-core 라이브러리 필요 */
                 .filter(m -> m.getName().startsWith("test"))
                 .forEach(m ->
                         {
