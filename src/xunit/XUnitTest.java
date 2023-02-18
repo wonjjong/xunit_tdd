@@ -7,12 +7,11 @@ public class XUnitTest {
         suite.run(result);
         System.out.println(result.getSummary());
 
-        TestSuite suite2 = new TestSuite();
+        /*TestSuite suite2 = new TestSuite();
         suite2.add(new TestCaseTest("testTemplateMethod"));
         suite2.add(suite); // 컴포지트 패턴
         TestResult result2 = new TestResult();
         suite2.run(result2);
-        System.out.println(result2.getSummary());
-
+        System.out.println(result2.getSummary());*/
     }
 }
